@@ -169,7 +169,7 @@
       CodeMirror.on(window, 'hashchange', runHarness);
 
       function esc(str) {
-        return str.replace(/[<&]/, function(ch) { return ch == "<" ? "&lt;" : "&amp;"; });
+        return str.replace(/[<&]/g, function(ch) { return ch == "<" ? "&lt;" : "&amp;"; });
       }
 
       var output = document.getElementById("output"),
