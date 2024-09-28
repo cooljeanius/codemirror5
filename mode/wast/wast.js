@@ -68,7 +68,7 @@ var kKeywords = [
     "i64\\.reinterpret_f64",
     // Atomics.
     "memory(\\.((atomic\\.(notify|wait(32|64)))|grow|size))?",
-    "i64\.atomic\\.(load32_u|store32|rmw32\\.(a[dn]d|sub|x?or|(cmp)?xchg)_u)",
+    "i64.atomic\\.(load32_u|store32|rmw32\\.(a[dn]d|sub|x?or|(cmp)?xchg)_u)",
     "i(32|64)\\.atomic\\.(load((8|16)_u)?|store(8|16)?|rmw(\\.(a[dn]d|sub|x?or|(cmp)?xchg)|(8|16)\\.(a[dn]d|sub|x?or|(cmp)?xchg)_u))",
     // SIMD.
     "v128\\.load(8x8|16x4|32x2)_[su]",
