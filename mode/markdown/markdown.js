@@ -534,7 +534,7 @@ CodeMirror.defineMode("markdown", function(cmCfg, modeCfg) {
       return type + tokenTypes.linkInline;
     }
 
-    if (ch === '<' && stream.match(/^[^\s>]+@[^\\s>]+(?:\\.[^\\s>]+)*>/, false)) {
+    if (ch === '<' && stream.match(/^[^\s>]+@[^\s>]+(?:\.[^\s>]+)*>/, false)) {
       state.f = state.inline = linkInline;
       if (modeCfg.highlightFormatting) state.formatting = "link";
       var type = getType(state);
