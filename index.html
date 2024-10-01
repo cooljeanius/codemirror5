@@ -66,7 +66,7 @@
     lineNumbers: true
   });
 </script></textarea>
-  <select id="demolist" onchange="document.location = this.options[this.selectedIndex].value;">
+  <select id="demolist" onchange="validateAndNavigate(this.options[this.selectedIndex].value);">
     <option value="#">Other demos...</option>
     <option value="demo/complete.html">Autocompletion</option>
     <option value="demo/folding.html">Code folding</option>
@@ -84,12 +84,37 @@
     <option value="demo/simplescrollbars.html">Custom scrollbars</option>
   </select></form>
   <script>
+    var allowedUrls = [
+      "#",
+      "demo/complete.html",
+      "demo/folding.html",
+      "demo/theme.html",
+      "mode/htmlmixed/index.html",
+      "demo/bidi.html",
+      "demo/variableheight.html",
+      "demo/search.html",
+      "demo/vim.html",
+      "demo/emacs.html",
+      "demo/sublime.html",
+      "demo/tern.html",
+      "demo/merge.html",
+      "demo/fullscreen.html",
+      "demo/simplescrollbars.html"
+    ];
+
+    function validateAndNavigate(value) {
+      if (allowedUrls.includes(value)) {
+        document.location = value;
+      } else {
+        console.warn("Invalid URL selected: " + value);
+      }
+    }
+
     var editor = CodeMirror.fromTextArea(document.getElementById("demotext"), {
       lineNumbers: true,
       mode: "text/html",
       matchBrackets: true
     });
-  </script>
 
   <div class=actions>
     Get the current version: <a href="https://codemirror.net/5/codemirror.zip">5.65.18</a>.<br>
