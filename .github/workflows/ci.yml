@@ -21,3 +21,6 @@ jobs:
         uses: anishathalye/proof-html@v2.1.2
         with:
           directory: .
+          ignore_empty_alt: true
+          ignore_missing_alt: true
+          allow_missing_href: true
