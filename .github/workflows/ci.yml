@@ -17,5 +17,5 @@ jobs:
 
       - run: npm test
 
-      - name: HTML5 Validator
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+      - name: Proof HTML
+        uses: anishathalye/proof-html@v2.1.2
