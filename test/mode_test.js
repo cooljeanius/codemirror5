@@ -28,7 +28,7 @@
     }
   }
 
-  var styleName = /[\w&-_]+/g;
+  var styleName = /[\w&-]+/g;
   function parseTokens(strs) {
     var tokens = [], plain = "";
     for (var i = 0; i < strs.length; ++i) {
